@@ -695,6 +695,11 @@ std::string BLECharacteristic::toString() {
 	return stringstream.str();
 } // toString
 
+void BLECharacteristic::disconnect()
+{
+	m_semaphoreConfEvt.give();
+}
+
 BLECharacteristicCallbacks::~BLECharacteristicCallbacks() {}
 
 /**
@@ -715,5 +720,6 @@ void BLECharacteristicCallbacks::onWrite(BLECharacteristic *pCharacteristic) {
 	ESP_LOGD("BLECharacteristicCallbacks", ">> onWrite: default");
 	ESP_LOGD("BLECharacteristicCallbacks", "<< onWrite");
 } // onWrite
+
 
 #endif /* CONFIG_BT_ENABLED */

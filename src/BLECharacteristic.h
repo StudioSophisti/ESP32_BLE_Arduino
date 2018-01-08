@@ -78,6 +78,7 @@ public:
 	void setWriteNoResponseProperty(bool value);
 	std::string toString();
 	uint16_t getHandle();
+	void disconnect();
 
 
 	static const uint32_t PROPERTY_READ      = 1<<0;
