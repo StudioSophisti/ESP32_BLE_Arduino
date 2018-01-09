@@ -63,7 +63,7 @@ public:
 	BLEDescriptor* getDescriptorByUUID(BLEUUID descriptorUUID);
 	//size_t         getLength();
 	BLEUUID        getUUID();
-	std::string    getValue();
+	BLEValue       getValue();
 
 	void indicate();
 	void notify();

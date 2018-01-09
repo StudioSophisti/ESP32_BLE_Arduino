@@ -190,8 +190,8 @@ BLEUUID BLECharacteristic::getUUID() {
  * @brief Retrieve the current value of the characteristic.
  * @return A pointer to storage containing the current characteristic value.
  */
-std::string BLECharacteristic::getValue() {
-	return m_value.getValue();
+BLEValue BLECharacteristic::getValue() {
+	return m_value;
 } // getValue
 
 
